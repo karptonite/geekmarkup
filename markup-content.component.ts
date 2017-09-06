@@ -10,7 +10,6 @@ import { MarkupComponentFactoryResolverService } from '@geek/geekmarkup/markup-c
 @Component({
   selector: 'gg-markup-content',
   template: '<ng-template #injectionContainer></ng-template>',
-  styleUrls: ['./markup-content.component.scss'],
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MarkupContentComponent implements OnInit {

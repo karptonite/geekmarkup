@@ -14,10 +14,11 @@ export class MarkupYoutubeComponent implements OnInit {
   @Input() content: any;
 
   public ngOnInit() {
-    let url =
-      'https://www.youtube.com/embed/' + this.content.getAttribute('video');
+    let url = `https://www.youtube.com/embed/${this.content.getAttribute(
+      'video',
+    )}`;
     if (this.content.getAttribute('showinfo').length) {
-      url = url + '?showinfo=' + this.content.getAttribute('showinfo');
+      url = `${url}?showinfo=${this.content.getAttribute('showinfo')}`;
     }
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }

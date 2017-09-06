@@ -22,10 +22,9 @@ export class MarkupVimeoComponent implements OnInit {
   @Input() content: any;
 
   public ngOnInit() {
-    const url =
-      'https://player.vimeo.com/video/' +
-      this.content.getAttribute('video') +
-      '?title=0&amp;byline=0&amp;portrait=0';
+    const url = `https://player.vimeo.com/video/${this.content.getAttribute(
+      'video',
+    )}?title=0&amp;byline=0&amp;portrait=0`;
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }
