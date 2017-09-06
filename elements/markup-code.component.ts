@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'gg-markup-code',
@@ -6,5 +6,5 @@ import { Component, Input, OnInit } from '@angular/core';
     '<gg-markup-content class="text-code" [content]="content"></gg-markup-content>',
 })
 export class MarkupCodeComponent {
-  @Input() content: any;
+  @Input() content: Element;
 }

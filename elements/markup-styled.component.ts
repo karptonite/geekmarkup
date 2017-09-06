@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
   `,
 })
 export class MarkupStyledComponent implements OnInit {
-  @Input() content: any;
+  @Input() content: Element;
 
   private style;
   private styles = {

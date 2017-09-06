@@ -18,7 +18,7 @@ export class MarkupMp3Component implements OnInit {
 
   public url;
 
-  @Input() content: any;
+  @Input() content: Element;
 
   public ngOnInit() {
     const url = encodeURIComponent(this.content.getAttribute('src'));

@@ -9,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class MarkupAnchorComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
-  @Input() content: any;
+  @Input() content: Element;
 
   public href;
 

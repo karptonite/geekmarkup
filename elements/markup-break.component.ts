@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
   selector: 'gg-markup-break',
   template: '<br />',
 })
-export class MarkupBreakComponent {}
+export class MarkupBreakComponent {
+  public content: Element;
+}

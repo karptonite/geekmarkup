@@ -9,7 +9,5 @@ import { Component, Input } from '@angular/core';
     </gg-user-link-custom>`,
 })
 export class MarkupUserComponent {
-  @Input() content: any;
-
-  ngOnInit() {}
+  @Input() content: Element;
 }

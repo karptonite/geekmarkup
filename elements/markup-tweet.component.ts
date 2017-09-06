@@ -1,11 +1,4 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  Inject,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { Component, ElementRef, Inject, Input, OnInit } from '@angular/core';
 import { ggTwitter } from '@geek/core/twitter.token';
 
 @Component({
@@ -16,14 +9,11 @@ export class MarkupTweetComponent implements OnInit {
   constructor(
     @Inject(ggTwitter) private twitter,
     private element: ElementRef,
-    private changeDetectorRef: ChangeDetectorRef,
   ) {}
 
-  @Input() content: any;
+  @Input() content: Element;
 
-  public ngOnInit() {}
-
-  public ngAfterViewInit() {
+  public ngOnInit() {
     const nativeElement = this.element.nativeElement;
     this.twitter.ready(twitter => {
       twitter.widgets.createTweet(
@@ -31,7 +21,6 @@ export class MarkupTweetComponent implements OnInit {
         nativeElement,
         {},
       );
-      // .then(() => this.changeDetectorRef.detectChanges());
     });
   }
 }

@@ -10,12 +10,12 @@ import {
 @Component({
   selector: 'gg-markup',
   template:
-    '<gg-markup-content #markupContent [content]=" rootNode"></gg-markup-content>',
+    '<gg-markup-content #markupContent [content]="rootNode"></gg-markup-content>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MarkupComponent implements OnInit, AfterViewChecked {
   @Input() markup: string; // this will be an xml string
-  public rootNode: any;
+  public rootNode: Node;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {}
 

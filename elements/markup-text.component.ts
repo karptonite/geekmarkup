@@ -5,5 +5,5 @@ import { Component, Input } from '@angular/core';
   template: '{{content?.nodeValue}}',
 })
 export class MarkupTextComponent {
-  @Input() content: any;
+  @Input() content: Node;
 }

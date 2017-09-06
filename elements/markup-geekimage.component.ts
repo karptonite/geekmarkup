@@ -9,9 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MarkupGeekimageComponent implements OnInit {
   public id;
   public size;
-  public block = false;
+  public block: string = null;
 
-  @Input() content: any;
+  @Input() content: Element;
 
   public ngOnInit() {
     this.id = this.content.getAttribute('id');

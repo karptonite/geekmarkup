@@ -18,7 +18,7 @@ export class MarkupSoundcloudComponent implements OnInit {
 
   public url;
 
-  @Input() content: any;
+  @Input() content: Element;
 
   public ngOnInit() {
     const src = encodeURIComponent(this.content.getAttribute('src'));

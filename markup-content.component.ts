@@ -10,17 +10,17 @@ import { MarkupComponentFactoryResolverService } from '@geek/geekmarkup/markup-c
 @Component({
   selector: 'gg-markup-content',
   template: '<ng-template #injectionContainer></ng-template>',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MarkupContentComponent implements OnInit {
-  @Input() content: any;
+  @Input() content: Node;
   @ViewChild('injectionContainer', { read: ViewContainerRef })
   containerRef;
 
   constructor(private factory: MarkupComponentFactoryResolverService) {}
 
-  private insertComponent(node) {
+  private insertComponent(node: Node) {
     // first get the component factory from the resolver
+
     const componentFactory = this.factory.getComponentFactory(node.nodeName);
     if (!componentFactory) {
       return;

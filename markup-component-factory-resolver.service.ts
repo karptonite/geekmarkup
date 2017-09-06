@@ -1,4 +1,8 @@
-import { ComponentFactoryResolver, Injectable } from '@angular/core';
+import {
+  ComponentFactory,
+  ComponentFactoryResolver,
+  Injectable,
+} from '@angular/core';
 import * as _ from 'lodash';
 
 import { MarkupAnchorComponent } from '@geek/geekmarkup/elements/markup-anchor.component';
@@ -26,7 +30,7 @@ import { MarkupCodeComponent } from '@geek/geekmarkup/elements/markup-code.compo
 export class MarkupComponentFactoryResolverService {
   constructor(private resolver: ComponentFactoryResolver) {}
 
-  private componentMap = {
+  private readonly componentMap = {
     '#text': MarkupTextComponent,
     a: MarkupAnchorComponent,
     q: MarkupQuoteComponent,

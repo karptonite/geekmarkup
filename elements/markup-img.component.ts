@@ -13,9 +13,9 @@ export class MarkupImgComponent implements OnInit {
 
   public src;
   public alt;
-  public block = false;
+  public block: string = null;
 
-  @Input() content: any;
+  @Input() content: Element;
 
   public ngOnInit() {
     this.src = this.sanitizer.bypassSecurityTrustResourceUrl(

@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./markup-quote.component.scss'],
 })
 export class MarkupItemLinkComponent {
-  @Input() content: any;
+  @Input() content: Element;
 }

@@ -19,7 +19,7 @@ export class MarkupVimeoComponent implements OnInit {
 
   public url;
 
-  @Input() content: any;
+  @Input() content: Element;
 
   public ngOnInit() {
     const url = `https://player.vimeo.com/video/${this.content.getAttribute(

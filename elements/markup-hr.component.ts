@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
   selector: 'gg-markup-hr',
   template: '<hr />',
 })
-export class MarkupHrComponent {}
+export class MarkupHrComponent {
+  public content: Element;
+}

@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./markup-quote.component.scss'],
 })
 export class MarkupQuoteComponent {
-  @Input() content: any;
+  @Input() content: Element;
 }

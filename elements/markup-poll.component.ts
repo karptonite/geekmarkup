@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   template: `<div class="alert alert-warning">Sorry, polls are not yet implemented in the new comments system</div>`,
 })
 export class MarkupPollComponent {
-  @Input() content: any;
+  @Input() content: Element;
 }
